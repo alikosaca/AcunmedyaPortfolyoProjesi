@@ -377,12 +377,12 @@
     <Content Include="Temaa\sidebar-03\scss\bootstrap\_variables.scss" />
     <Content Include="Temaa\sidebar-03\scss\style.scss" />
     <Content Include="Views\Education\Index.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categories\" />
     <Folder Include="Views\Job\" />
-    <Folder Include="Views\Message\" />
     <Folder Include="Views\Project\" />
     <Folder Include="Views\Service\" />
     <Folder Include="Views\Sider\" />
