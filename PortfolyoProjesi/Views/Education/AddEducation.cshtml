@@ -1,13 +1,13 @@
-﻿@model PortfolyoProjesi.Models.Tbl_Project
+﻿@model PortfolyoProjesi.Models.Tbl_Educatiton
 @{
-    ViewBag.Title = "AddProject";
+    ViewBag.Title = "AddEducation";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
 
 <div class="container-fluid p-4">
     <h2 class="text-light mb-4 pb-2" style="border-bottom: 2px solid rgba(255,255,255,0.1); font-weight: 300; letter-spacing: 1px;">
         <i class="bi bi-journal-code me-2"></i>
-        Yeni proje Ekle
+        Eğitim / Ekle
     </h2>
 
     <form method="post">
@@ -15,22 +15,24 @@
             <table class="table table-dark">
                 <thead>
                     <tr>
-                        <th scope="col">Image Url</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Start Year</th>
+                        <th scope="col">End Year</th>
+                        <th scope="col">School</th>
                         <th scope="col">Description</th>
-                        <th scope="col">Güncelle</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td class="alert alert-light">@Html.TextBoxFor(x => x.Image1, new { @class = "form-control", @style = "background-color: #343A40; color: #F8B908;" })</td>
-                        <td>@Html.TextBoxFor(x => x.ProjectName, new { @class = "form-control", @style = "background-color: #343A40; color: #F8B908;" })</td>
+                        <td class="alert alert-light">@Html.TextBoxFor(x => x.StartYear, new { @class = "form-control", @type = "date", @style = "background-color: #343A40; color: #F8B908;"})</td>
+                        <td>@Html.TextBoxFor(x => x.EndYear, new { @class = "form-control",  @type = "date", @style = "background-color: #343A40; color: #F8B908;" })</td>
+                        <td>@Html.TextAreaFor(x => x.Name, new { @class = "form-control", @id = "exampleFormControlTextarea1", @rows = "15", @style = "background-color: #343A40; color: #F8B908; " })</td>
                         <td>@Html.TextAreaFor(x => x.Description, new { @class = "form-control", @id = "exampleFormControlTextarea1", @rows = "15", @style = "background-color: #343A40; color: #F8B908; " })</td>
                         <td><button class="btn btn-outline-info">Ekle</button></td>
                     </tr>
                 </tbody>
             </table>
-            <a href="~/Project/Index" class="btn btn-outline-danger btn-sm px-3">Vazgeç</a>
+            <a href="~/Education/Index" class="btn btn-outline-danger btn-sm px-3">Vazgeç</a>
         </div>
     </form>
 </div>
