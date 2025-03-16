@@ -383,11 +383,13 @@
     <Content Include="Views\Project\EditProject.cshtml" />
     <Content Include="Views\Education\AddEducation.cshtml" />
     <Content Include="Views\Education\EditEducation.cshtml" />
+    <Content Include="Views\Job\Index.cshtml" />
+    <Content Include="Views\Job\AddJob.cshtml" />
+    <Content Include="Views\Job\EditJob.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categories\" />
-    <Folder Include="Views\Job\" />
     <Folder Include="Views\Service\" />
     <Folder Include="Views\Sider\" />
     <Folder Include="Views\Skill\" />
