@@ -1,0 +1,41 @@
+﻿@model List<PortfolyoProjesi.Models.Tbl_Project>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid p-4">
+    <h2 class="text-light mb-4 pb-2" style="border-bottom: 2px solid rgba(255,255,255,0.1); font-weight: 300; letter-spacing: 1px;">
+        <i class="bi bi-journal-code me-2"></i>
+        Projelerim
+    </h2>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Project Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Description</th>
+                <th scope="col">Güncelle</th>
+                <th scope="col">Sil</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.ProjectID</th>
+                    <td><img src="@item.Image1" width="200" height="200" /></td>
+                    <td>@item.ProjectName</td>
+                    <td>@item.Description</td>
+                    <td><a href="~/Project/EditProject/@item.ProjectID" class="btn btn-outline-info btn-sm px-3"><i class="fa fa-edit me-2"></i>Güncelle</a></td>
+                    <td><a href="~/Project/DeleteProject/@item.ProjectID" class="btn btn-outline-danger btn-sm px-3"><i class="fa fa-trash me-2"></i>Sil</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="~/Project/AddProject" class="btn btn-outline-warning btn-sm px-3"><i class="bi bi-plus-circle me-3"></i>Ekle</a>
+
+</div>

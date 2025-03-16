@@ -21,6 +21,7 @@ namespace PortfolyoProjesi.Controllers
         public ActionResult Index(Tbl_About _About)
         {
             var values = aboutManager.Tbl_About.Find(1);
+            values.ImageUrl = _About.ImageUrl;
             values.Title = _About.Title;
             values.Description = _About.Description;
             values.Description1 = _About.Description1;

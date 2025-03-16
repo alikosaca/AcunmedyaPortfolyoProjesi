@@ -11,52 +11,53 @@
         <i class="fa fa-user-circle me-2"></i>
         Hakkımda
     </h2>
+
+    <form method="post">
+        <img src="@Model.ImageUrl" />
+        <label class="text-warning">
+            Resim Url
+            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+        </label>
+        <br />
+        <br />
+        <label class="text-warning">Başlık</label>
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        <br />
+        <label class="text-warning">Açıklama1</label>
+        @Html.TextAreaFor(x => x.Description, 10, 2, new { @class = "form-control ", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
+        <br />
+        <label class="text-warning">Açıklama2</label>
+        @Html.TextAreaFor(x => x.Description1, 10, 2, new { @class = "form-control", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
+        <br />
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Yaş</label>
+            @Html.TextBoxFor(x => x.Age, new { @style = "width: 150px;" })
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Web Site</label>
+            @Html.TextBoxFor(x => x.Website, new { @style = "width: 150px;" })
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Telefon Numarası</label>
+            @Html.TextBoxFor(x => x.Phone, new { @style = "width: 150px;" })
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Şehir</label>
+            @Html.TextBoxFor(x => x.City, new { @style = "width: 150px;" })
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Email</label>
+            @Html.TextBoxFor(x => x.Email, new { @style = "width: 150px;" })
+        </div>
+
+        <div style="display: flex; margin-bottom: 10px;">
+            <label class="text-warning" style="width: 150px;">Seviye</label>
+            @Html.TextBoxFor(x => x.Degree, new { @style = "width: 150px;" })
+        </div>
+        <button type="submit" class="btn btn-outline-info">Güncelle</button>
+    </form>
 </div>
-<form method="post">
-    <img src="@Model.ImageUrl" />
-    <label class="text-warning">
-        Resim Url
-        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
-    </label>
-    <br />
-    <br />
-    <label class="text-warning">Başlık</label>
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    <br />
-    <label class="text-warning">Açıklama1</label>
-    @Html.TextAreaFor(x => x.Description, new { @class = "form-control", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
-    <br />
-    <label class="text-warning">Açıklama2</label>
-    @Html.TextAreaFor(x => x.Description1, new { @class = "form-control", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
-    <br />
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Yaş</label>
-        @Html.TextBoxFor(x => x.Age, new { @style = "width: 150px;" })
-    </div>
-
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Web Site</label>
-        @Html.TextBoxFor(x => x.Website, new { @style = "width: 150px;" })
-    </div>
-
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Telefon Numarası</label>
-        @Html.TextBoxFor(x => x.Phone, new { @style = "width: 150px;" })
-    </div>
-
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Şehir</label>
-        @Html.TextBoxFor(x => x.City, new { @style = "width: 150px;" })
-    </div>
-
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Email</label>
-        @Html.TextBoxFor(x => x.Email, new { @style = "width: 150px;" })
-    </div>
-
-    <div style="display: flex; margin-bottom: 10px;">
-        <label class="text-warning" style="width: 150px;">Seviye</label>
-        @Html.TextBoxFor(x => x.Degree, new { @style = "width: 150px;" })
-    </div>
-    <button type="submit" class="btn btn-outline-info">Güncelle</button>
-</form>
