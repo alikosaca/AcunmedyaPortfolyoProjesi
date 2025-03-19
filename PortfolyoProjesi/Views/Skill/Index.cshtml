@@ -1,4 +1,4 @@
-﻿
+﻿@model List<PortfolyoProjesi.Models.Tbl_Skill>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/AdminLayout/Index.cshtml";
@@ -14,11 +14,8 @@
         <thead>
             <tr>
                 <th scope="col">Id</th>
-                <th scope="col">Start Year</th>
-                <th scope="col">End Year</th>
-                <th scope="col">degree</th>
-                <th scope="col">Company</th>
-                <th scope="col">Description</th>
+                <th scope="col">Başlık</th>
+                <th scope="col">Açıklama</th>
                 <th scope="col"></th>
                 <th scope="col"></th>
             </tr>
@@ -27,18 +24,15 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <th scope="row">@item.JobID</th>
-                    <td>@(item.StartDate.HasValue ? item.StartDate.Value.ToString("dd/MM/yyyy") : "")</td>
-                    <td>@(item.EndDate.HasValue ? item.EndDate.Value.ToString("dd/MM/yyyy") : "")</td>
-                    <td>@item.Title</td>
-                    <td>@item.CompanyName</td>
+                    <th scope="row">@item.SkillID</th>
+                    <td>@item.SkillName</td>
                     <td>@item.Description</td>
-                    <td><a href="~/Job/EditJob/@item.JobID" class="btn btn-outline-info btn-sm px-3">Güncelle</a></td>
-                    <td><a href="~/Job/DeleteJob/@item.JobID" class="btn btn-outline-danger btn-sm px-3">Sil</a></td>
+                    <td><a href="~/Skill/EditSkill/@item.SkillID" class="btn btn-outline-info btn-sm px-3">Güncelle</a></td>
+                    <td><a href="~/Skill/DeleteSkill/@item.SkillID" class="btn btn-outline-danger btn-sm px-3">Sil</a></td>
                 </tr>
             }
         </tbody>
     </table>
-    <a href="~/Job/AddJob" class="btn btn-outline-warning btn-sm px-3"><i class="bi bi-plus-circle me-3"></i>Ekle</a>
+    <a href="~/Skill/Addskill" class="btn btn-outline-warning btn-sm px-3"><i class="bi bi-plus-circle me-3"></i>Ekle</a>
 </div>
 

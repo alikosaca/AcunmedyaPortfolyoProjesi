@@ -388,6 +388,8 @@
     <Content Include="Views\Job\EditJob.cshtml" />
     <Content Include="Views\Sider\Index.cshtml" />
     <Content Include="Views\Skill\Index.cshtml" />
+    <Content Include="Views\Skill\EditSkill.cshtml" />
+    <Content Include="Views\Skill\AddSkill.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
