@@ -27,8 +27,9 @@
         @Html.TextAreaFor(x => x.Description, 10, 2, new { @class = "form-control ", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
         <br />
         <label class="text-warning">Açıklama2</label>
-        @Html.TextAreaFor(x => x.Description1, 10, 2, new { @class = "form-control", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
+        @Html.TextAreaFor(x => x.Description1, 10, 2, new { @class = "form-control", @id = "floatingTextarea2", @style = "height: 100px; width: 100%; padding: 10px; margin-bottom: 3px;" })
         <br />
+
         <div style="display: flex; margin-bottom: 10px;">
             <label class="text-warning" style="width: 150px;">Yaş</label>
             @Html.TextBoxFor(x => x.Age, new { @style = "width: 150px;" })

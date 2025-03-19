@@ -1,0 +1,33 @@
+﻿@model PortfolyoProjesi.Models.Tbl_Sider
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid p-4">
+    <h2 class="text-light mb-4 pb-2" style="border-bottom: 2px solid rgba(255,255,255,0.1); font-weight: 300; letter-spacing: 1px;">
+        <i class="fa fa-user-circle me-2"></i>
+        Giriş Sayfası
+    </h2>
+
+    <form method="post">
+        <img src="@Model.ImageUrl" />
+        <label class="text-warning">
+            Resim Url
+            @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+        </label>
+        <br />
+        <br />
+        <label class="text-warning">Url</label>
+        @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+        <br />
+        <label class="text-warning">Açıklama1</label>
+        @Html.TextAreaFor(x => x.Description, 10, 2, new { @class = "form-control ", @id = "floatingTextarea2", @style = "height: 100px; width: %100; padding: 10px; margin-bottom: 3px;" })
+        <br />
+        <button type="submit" class="btn btn-outline-info">Güncelle</button>
+
+    </form>
+</div>
+
+

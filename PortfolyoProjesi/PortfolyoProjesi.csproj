@@ -386,13 +386,13 @@
     <Content Include="Views\Job\Index.cshtml" />
     <Content Include="Views\Job\AddJob.cshtml" />
     <Content Include="Views\Job\EditJob.cshtml" />
+    <Content Include="Views\Sider\Index.cshtml" />
+    <Content Include="Views\Skill\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categories\" />
     <Folder Include="Views\Service\" />
-    <Folder Include="Views\Sider\" />
-    <Folder Include="Views\Skill\" />
     <Folder Include="Views\Static\" />
     <Folder Include="Views\Testimonial\" />
   </ItemGroup>
