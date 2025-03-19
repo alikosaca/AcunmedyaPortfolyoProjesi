@@ -19,5 +19,6 @@ namespace PortfolyoProjesi.Models
         public string Mail { get; set; }
         public string Subject { get; set; }
         public string MessageContent { get; set; }
+        public Nullable<int> Isactive { get; set; }
     }
 }
