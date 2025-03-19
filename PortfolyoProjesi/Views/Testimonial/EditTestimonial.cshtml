@@ -1,0 +1,42 @@
+﻿@model PortfolyoProjesi.Models.Tbl_Testimonial
+@{
+    ViewBag.Title = "EditTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<div class="container-fluid p-4">
+    <h2 class="text-light mb-4 pb-2" style="border-bottom: 2px solid rgba(255,255,255,0.1); font-weight: 300; letter-spacing: 1px;">
+        <i class="bi bi-journal-code me-2"></i>
+        Referanslar/Düzenle/@Model.TestimonialName
+    </h2>
+
+    <form method="post">
+        @Html.HiddenFor(x => x.TestimonialID)
+        <div class="container-fluid p-4">
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">Resim</th>
+                        <th scope="col">Adı</th>
+                        <th scope="col">Mesleği</th>
+                        <th scope="col">Açıklama1</th>
+                        <th scope="col">Açıklama2</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="alert alert-light">@Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @style = "background-color: #343A40; color: #F8B908;" })</td>
+                        <td>@Html.TextBoxFor(x => x.TestimonialName, new { @class = "form-control", @style = "background-color: #343A40; color: #F8B908;" })</td>
+                        <td>@Html.TextAreaFor(x => x.Title, new { @class = "form-control", @id = "exampleFormControlTextarea1", @rows = "15", @style = "background-color: #343A40; color: #F8B908; " })</td>
+                        <td>@Html.TextAreaFor(x => x.Description1, new { @class = "form-control", @id = "exampleFormControlTextarea1", @rows = "15", @style = "background-color: #343A40; color: #F8B908; " })</td>
+                        <td>@Html.TextAreaFor(x => x.Description2, new { @class = "form-control", @id = "exampleFormControlTextarea1", @rows = "15", @style = "background-color: #343A40; color: #F8B908; " })</td>
+                        <td><button class="btn btn-outline-info">Kaydet</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="@Url.Action("Index", "Testimonial")" class="btn btn-outline-danger btn-sm px-3">Vazgeç</a>
+        </div>
+    </form>
+</div>

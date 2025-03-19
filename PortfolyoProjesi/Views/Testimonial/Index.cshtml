@@ -1,0 +1,45 @@
+﻿@model List<PortfolyoProjesi.Models.Tbl_Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container-fluid p-4">
+    <h2 class="text-light mb-4 pb-2" style="border-bottom: 2px solid rgba(255,255,255,0.1); font-weight: 300; letter-spacing: 1px;">
+        <i class="bi bi-briefcase"></i>
+        Referanslar
+    </h2>
+
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Resim</th>
+                <th scope="col">Adı</th>
+                <th scope="col">Mesleği</th>
+                <th scope="col">Açıklama1</th>
+                <th scope="col">Açıklama2</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.TestimonialID</th>
+                    <th><img src="@item.ImageUrl" width="200" height="200" /></th>
+                    <td>@item.TestimonialName</td>
+                    <td>@item.Title</td>
+                    <td>@item.Description1</td>
+                    <td>@item.Description2</td>
+                    <td><a href="@Url.Action("EditTestimonial", "Testimonial", new { id = item.TestimonialID })" class="btn btn-outline-info btn-sm px-3">Güncelle</a></td>
+                    <td><a href="@Url.Action("DeleteTestimonial", "Testimonial", new { id = item.TestimonialID })" class="btn btn-outline-danger btn-sm px-3">Sil</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="@Url.Action("AddTestimonial", "Testimonial")" class="btn btn-outline-warning btn-sm px-3"><i class="bi bi-plus-circle me-3"></i>Ekle</a>
+</div>
+
+

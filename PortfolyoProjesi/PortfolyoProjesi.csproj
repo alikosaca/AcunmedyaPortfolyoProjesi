@@ -390,13 +390,15 @@
     <Content Include="Views\Skill\Index.cshtml" />
     <Content Include="Views\Skill\EditSkill.cshtml" />
     <Content Include="Views\Skill\AddSkill.cshtml" />
+    <Content Include="Views\Testimonial\Index.cshtml" />
+    <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
+    <Content Include="Views\Testimonial\EditTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Views\Categories\" />
     <Folder Include="Views\Service\" />
     <Folder Include="Views\Static\" />
-    <Folder Include="Views\Testimonial\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
