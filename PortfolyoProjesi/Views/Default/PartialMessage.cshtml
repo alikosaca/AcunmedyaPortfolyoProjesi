@@ -1,0 +1,202 @@
+﻿﻿<div class="col-lg-8 section dark-background message-col">
+    <div class="msg-terminal-window" data-aos="fade-up" data-aos-delay="100">
+        <div class="msg-terminal-header">
+            <div class="msg-terminal-buttons">
+                <span class="msg-terminal-button msg-terminal-close"></span>
+                <span class="msg-terminal-button msg-terminal-minimize"></span>
+                <span class="msg-terminal-button msg-terminal-maximize"></span>
+            </div>
+            <div class="msg-terminal-title">Mesaj gönder</div>
+        </div>
+        <div class="msg-terminal-body">   
+            <div class="msg-terminal-output">
+                <span class="msg-terminal-command">bana Mesaj Gönder :)</span>
+            </div>
+            
+            <form action="@Url.Action("PartialMessage","Default")" method="post" class="msg-terminal-form mt-4">
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <div class="form-group msg-terminal-input-group">
+                            <label class="msg-terminal-label">İsim Soyisim</label>
+                            <input type="text" name="NameSurname" class="form-control msg-terminal-input" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group msg-terminal-input-group">
+                            <label class="msg-terminal-label">E-posta</label>
+                            <input type="email" class="form-control msg-terminal-input" name="Mail" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group msg-terminal-input-group">
+                            <label class="msg-terminal-label">Konu</label>
+                            <input type="text" class="form-control msg-terminal-input" name="Subject" required>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="form-group msg-terminal-input-group">
+                            <label class="msg-terminal-label">Mesaj</label>
+                            <textarea class="form-control msg-terminal-textarea" name="MessageContent" rows="6" required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 text-center mt-3">
+                        <button type="submit" class="btn msg-terminal-btn">
+                            <span class="msg-terminal-prompt">&gt;</span> Mesaj Gönder
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Mesaj terminali stil tanımları - "msg-" öneki ile çakışma önleme */
+    .msg-terminal-window {
+        width: 100%;
+        margin: 0 0 20px 0;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-family: 'Consolas', 'Courier New', monospace;
+        overflow: hidden;
+        text-align: left;
+        height: 100%;
+    }
+    
+    .msg-terminal-header {
+        height: 30px;
+        padding: 5px 10px;
+        background-color: #323233;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .msg-terminal-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .msg-terminal-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .msg-terminal-close {
+        background-color: #ff5f56;
+    }
+    
+    .msg-terminal-minimize {
+        background-color: #ffbd2e;
+    }
+    
+    .msg-terminal-maximize {
+        background-color: #27c93f;
+    }
+    
+    .msg-terminal-title {
+        color: #aaa;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .msg-terminal-body {
+        padding: 15px;
+        color: #f1f1f1;
+        background-color: #1e1e1e;
+        height: calc(100% - 30px);
+        overflow-y: auto;
+    }
+    
+    .msg-terminal-line {
+        margin-bottom: 15px;
+        color: #f1f1f1;
+    }
+    
+    .msg-terminal-output {
+        margin: 15px 0;
+    }
+    
+    .msg-terminal-prompt {
+        color: #4caf50;
+        margin-right: 10px;
+    }
+    
+    .msg-terminal-command {
+        color: #f1f1f1;
+    }
+    
+    /* Form stillemesi */
+    .msg-terminal-form {
+        border-top: 1px solid #333;
+        padding-top: 20px;
+    }
+    
+    .msg-terminal-input-group {
+        margin-bottom: 15px;
+    }
+    
+    .msg-terminal-label {
+        display: block;
+        color: #4caf50;
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+    }
+    
+    .msg-terminal-input, .msg-terminal-textarea {
+        background-color: #2d2d2d;
+        border: 1px solid #444;
+        color: #f1f1f1;
+        border-radius: 4px;
+        padding: 8px 12px;
+        width: 100%;
+        transition: border-color 0.3s;
+    }
+    
+    .msg-terminal-input:focus, .msg-terminal-textarea:focus {
+        border-color: #4caf50;
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+    }
+    
+    .msg-terminal-textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+    
+    .msg-terminal-btn {
+        background-color: #2d2d2d;
+        color: #4caf50;
+        border: 1px solid #4caf50;
+        padding: 8px 20px;
+        border-radius: 4px;
+        font-family: 'Consolas', 'Courier New', monospace;
+        transition: all 0.3s;
+        display: inline-flex;
+        align-items: center;
+    }
+    
+    .msg-terminal-btn:hover {
+        background-color: #4caf50;
+        color: #1e1e1e;
+    }
+    
+    .msg-terminal-cursor::after {
+        content: "▋";
+        animation: msgTerminalBlink 1s step-start infinite;
+    }
+    
+    @@keyframes msgTerminalBlink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>

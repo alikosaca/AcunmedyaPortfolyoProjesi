@@ -29,6 +29,20 @@ namespace PortfolyoProjesi.Controllers
 
             return View(messages);
         }
+        public ActionResult ReadMessage(int id)
+        {
+            var messages = db.Tbl_Message.Find(id);
+            if (messages.Isactive == 1)
+            {
+                messages.Isactive = 0;
+            }
+            else
+            {
+                messages.Isactive = 1;
+            }
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
         public ActionResult DeleteMessage(int id)
         {
             var message = db.Tbl_Message.Find(id);

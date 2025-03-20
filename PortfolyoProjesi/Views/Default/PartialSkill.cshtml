@@ -1,0 +1,218 @@
+﻿<section id="skill" class="skills section dark-background">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Yeteneklerim</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-button terminal-close"></span>
+                    <span class="terminal-button terminal-minimize"></span>
+                    <span class="terminal-button terminal-maximize"></span>
+                </div>
+                <div class="terminal-title">Yetenekler</div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-output">
+                    <span class="terminal-prompt">Programlama Dilleri</span>
+                </div>
+                
+                <div class="terminal-output skill-list">
+                    <div class="skill-item"><span class="skill-icon">➜</span> C</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> C#</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> SQL</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> HTML/CSS</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> JavaScript</div>
+                </div>
+                
+                <div class="terminal-output mt-3">
+                    <span class="terminal-prompt">Frameworkler</span>
+                </div>
+                
+                <div class="terminal-output skill-list">
+                    <div class="skill-item"><span class="skill-icon">➜</span> .NET Core</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> ASP.NET MVC</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> Entity Framework</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> Bootstrap</div>
+                </div>
+                
+                <div class="terminal-output mt-3">
+                    <span class="terminal-prompt">Toollar</span>
+                </div>
+                
+                <div class="terminal-output skill-list">
+                    <div class="skill-item"><span class="skill-icon">➜</span> Visual Studio</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> Git</div>
+                    <div class="skill-item"><span class="skill-icon">➜</span> SQL Server</div>
+                </div>
+                
+        </div>
+    </div>
+</section>
+
+<style>
+    .terminal-window {
+        width: 100%;
+        margin: 20px auto; /* Üst ve alt 20px, sağ ve sol auto ile merkezleme */
+        max-width: 900px;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-family: 'Consolas', 'Courier New', monospace;
+        overflow: hidden;
+        text-align: left;
+        display: block; /* Block element olarak ayarlayıp */
+        margin-left: auto; /* Sol marjin otomatik */
+        margin-right: auto; /* Sağ marjin otomatik */
+    }
+    
+    .terminal-header {
+        height: 30px;
+        padding: 5px 10px;
+        background-color: #323233;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .terminal-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .terminal-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .terminal-close {
+        background-color: #ff5f56;
+    }
+    
+    .terminal-minimize {
+        background-color: #ffbd2e;
+    }
+    
+    .terminal-maximize {
+        background-color: #27c93f;
+    }
+    
+    .terminal-title {
+        color: #aaa;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+        color: #f1f1f1;
+        background-color: #1e1e1e;
+    }
+    
+    .terminal-line {
+        margin-bottom: 10px;
+        color: #f1f1f1;
+    }
+    
+    .terminal-output {
+        margin: 10px 0;
+    }
+    
+    .terminal-prompt {
+        color: #4caf50;
+        margin-right: 10px;
+    }
+    
+    .terminal-command {
+        color: #f1f1f1;
+    }
+    
+    .skill-list {
+        margin: 10px 0 10px 20px;
+        columns: 2;
+        column-gap: 40px;
+    }
+    
+    .skill-item {
+        display: block;
+        color: #f1f1f1;
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+
+
+    .skill-icon {
+        color: #4caf50;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    
+    .terminal-cursor::after {
+        content: "▋";
+        animation: blink 1s step-start infinite;
+    }
+    
+    .mt-3 {
+        margin-top: 15px;
+    }
+    
+    @@keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+    
+    /* Mobil görünüm için düzenleme */
+    @@media (max-width: 768px) {
+        .skill-list {
+            columns: 1;
+        }
+    }
+
+    /* Genel terminal stili (tüm terminallere uygulanır) */
+    .terminal-window {
+        width: 100%;
+        max-width: 900px;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-family: 'Consolas', 'Courier New', monospace;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+    /* Skills ve PartialMain sayfalarındaki terminalleri ortala */
+    #skills .terminal-window, 
+    #hero .terminal-window,
+    #projects .terminal-window {
+        margin: 20px auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Contact sayfasındaki terminali özelleştir (ortalama yok) */
+    #contact .terminal-window {
+        margin: 20px 0;
+        display: block;
+        /* margin-left ve margin-right otomatik değil */
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const progress = bar.getAttribute('data-progress');
+                bar.style.width = progress + '%';
+            });
+        }, 500);
+    });
+</script>

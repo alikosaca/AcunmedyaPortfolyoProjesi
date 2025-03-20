@@ -1,0 +1,122 @@
+﻿@model PortfolyoProjesi.Models.Tbl_Sider
+
+
+<section id="PartiaMain" class="section dark-background d-flex align-items-center justify-content-center" style="background-image: url('@Model.ImageUrl'); background-size: cover; background-position: center; min-height: 80vh;">
+    <div class="container text-center d-flex flex-column align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="100">
+
+
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span class="terminal-button terminal-close"></span>
+                    <span class="terminal-button terminal-minimize"></span>
+                    <span class="terminal-button terminal-maximize"></span>
+                </div>
+            </div>
+            <div class="terminal-body">
+                <div class="terminal-prompt">Merhaba!</div>
+                <div class="terminal-output">
+                    <span class="terminal-text">@Model.Title<br /> @Model.Description</span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#about" class="btn-scroll mt-4" title="Scroll Down"><i class="bi bi-warning-down"></i></a>
+    </div>
+
+    <style>
+
+        .terminal-window {
+        width: 100%;
+        margin: 20px auto; /* Üst ve alt 20px, sağ ve sol auto ile merkezleme */
+        max-width: 900px;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-family: 'Consolas', 'Courier New', monospace;
+        overflow: hidden;
+        text-align: left;
+        display: block; /* Block element olarak ayarlayıp */
+        margin-left: auto; /* Sol marjin otomatik */
+        margin-right: auto; /* Sağ marjin otomatik */
+        }
+
+        .terminal-header {
+            height: 30px;
+            padding: 5px 10px;
+            background-color: #323233;
+            border-radius: 6px 6px 0 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .terminal-buttons {
+            display: flex;
+            gap: 6px;
+        }
+
+        .terminal-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .terminal-close {
+            background-color: #ff5f56;
+        }
+
+        .terminal-minimize {
+            background-color: #ffbd2e;
+        }
+
+        .terminal-maximize {
+            background-color: #27c93f;
+        }
+
+        .terminal-title {
+            color: #999;
+            font-size: 12px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .terminal-body {
+            padding: 15px;
+            color: #33ff33;
+        }
+
+        .terminal-line {
+            margin-bottom: 5px;
+        }
+
+        .terminal-output {
+            margin: 10px 0;
+        }
+
+        .terminal-text {
+            color: #f1f1f1;
+            font-weight: bold;
+        }
+
+        .terminal-cursor::after {
+            content: "▋";
+            animation: blink 1s step-start infinite;
+        }
+        @@keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+
+    </style>
+
+</section>
+        
+        
+        
+        
+        @* <p background-color="black">
+            01001101 01100101 01110010 01101000 01100001 01100010 01100001 00100000<br />
+            01100010 01100101 01101110 00100000 01000001 01101100 01101001 <br />
+        </p> *@

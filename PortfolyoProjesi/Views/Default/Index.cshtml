@@ -1,0 +1,120 @@
+﻿﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "Default")
+
+<body class="bg-dark text-light">
+
+    <header id="header" class="header d-flex align-items-center sticky-top dark-background">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+            <a href="index.html" class="logo d-flex align-items-center">
+
+
+                <h1 class="sitename">Ali Koşaca</h1>
+            </a>
+
+            
+            @Html.Action("PartialMenu", "Default")
+        </div>
+    </header>
+
+    <main class="main">
+        @Html.Action("PartiaMain", "Default")
+        <!-- Hero Section -->
+        <!-- /Hero Section -->
+        <!-- About Section -->
+        @Html.Action("PartialAbout", "Default")
+        <!-- Skills Section -->
+        @Html.Action("PartialSkill", "Default")
+        <!-- Resume Section -->
+        <!-- /Services Section -->
+<section id="Services" class="resume section section dark-background">
+    <div class="container">
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Özgeçmiş</h2>
+        </div>
+        
+        <div class="row">
+            @Html.Action("PartialEducation", "Default")
+            @Html.Action("PartialJob", "Default")
+        </div>
+    </div>
+</section>
+            <!-- Portfolio Section -->
+            @Html.Action("PartialPorject", "Default")
+            <!-- Testimonials Section -->
+            @Html.Action("PartialTestimonial", "Default")
+
+            <!-- /Testimonials Section -->
+            <!-- Contact Section -->
+
+            <section id="contact" class="contact section dark-background">
+
+                <!-- Section Title -->
+                <div class="container section-title" data-aos="fade-up">
+                    <h2>İletişim</h2>
+                    <p>Benim ile Iletişime geçin</p>
+                </div><!-- End Section Title -->
+
+                <div id="contact" class="container" data-aos="fade" data-aos-delay="100">
+                    <div class="row gy-2 terminal-row">
+                        @Html.Action("PartialContact", "Default")
+                        @Html.Action("PartialMessage", "Default")
+                    </div>
+                </div>
+
+                <style>
+                    /* Terminal hizalama için ek CSS */
+                    .terminal-row {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -5px;
+                        margin-left: -5px;
+                    }
+                    
+                    .terminal-row > .col-lg-4,
+                    .terminal-row > .col-lg-8 {
+                        padding-right: 5px;
+                        padding-left: 5px;
+                    }
+                    
+                    .contact-col, .message-col {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .terminal-window, .msg-terminal-window {
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        flex-grow: 1;
+                    }
+                    
+                    /* Eşit yükseklikte terminal başlıkları */
+                    .terminal-header, .msg-terminal-header {
+                        height: 30px;
+                    }
+                    
+                    /* Responsive düzenleme */
+                    @@media (max-width: 991px) {
+                        .message-col {
+                            margin-top: 10px;
+                        }
+                    }
+                </style>
+            </section><!-- /Contact Section -->
+
+    </main>
+
+    @Html.Action("PartialFooter", "Default")
+
+    @Html.Action("PartialScript", "Default")
+
+</body>
+
+</html>

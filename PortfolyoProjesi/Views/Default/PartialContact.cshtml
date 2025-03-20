@@ -1,0 +1,143 @@
+﻿@model List<PortfolyoProjesi.Models.Tbl_Contact>
+
+<div class="col-lg-4 section dark-background">
+    <div class="terminal-window" data-aos="fade-up" data-aos-delay="100">
+        <div class="terminal-header">
+            <div class="terminal-buttons">
+                <span class="terminal-button terminal-close"></span>
+                <span class="terminal-button terminal-minimize"></span>
+                <span class="terminal-button terminal-maximize"></span>
+            </div>
+            <div class="terminal-title">İletişim Bilgileri</div>
+        </div>
+        <div class="terminal-body">
+            <div class="terminal-output">
+                <span class="terminal-prompt">></span>
+                <span class="terminal-prompt">ADRES</span>
+            </div>
+            <div class="terminal-output">
+                <span class="terminal-text">@Model[0].Adress</span>
+            </div>
+            
+            <div class="terminal-output mt-3">
+                <span class="terminal-prompt">></span>
+                <span class="terminal-prompt">TELEFON</span>
+            </div>
+            <div class="terminal-output">
+                <span class="terminal-text">@Model[0].Phone</span>
+            </div>
+            
+            <div class="terminal-output mt-3">
+                <span class="terminal-prompt">></span>
+                <span class="terminal-prompt">E-MAIL</span>
+            </div>
+            <div class="terminal-output">
+                <span class="terminal-text">@Model[0].Email</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .terminal-window {
+        width: 100%;
+        margin: 20px 0;
+        border-radius: 8px;
+        background-color: #1e1e1e;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+        font-family: 'Consolas', 'Courier New', monospace;
+        overflow: hidden;
+        text-align: left;
+    }
+    
+    .terminal-header {
+        height: 30px;
+        padding: 5px 10px;
+        background-color: #323233;
+        border-radius: 8px 8px 0 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    .terminal-buttons {
+        display: flex;
+        gap: 6px;
+    }
+    
+    .terminal-button {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        display: inline-block;
+    }
+    
+    .terminal-close {
+        background-color: #ff5f56;
+    }
+    
+    .terminal-minimize {
+        background-color: #ffbd2e;
+    }
+    
+    .terminal-maximize {
+        background-color: #27c93f;
+    }
+    
+    .terminal-title {
+        color: #aaa;
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .terminal-body {
+        padding: 15px;
+        color: #33ff33;
+    }
+    
+    .terminal-line {
+        margin-bottom: 10px;
+        color: #f1f1f1;
+    }
+    
+    .terminal-output {
+        margin: 5px 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .terminal-prompt {
+        display: block;
+        color: #4caf50;
+        margin-bottom: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .terminal-text {
+        color: #f1f1f1;
+        font-weight: bold;
+    }
+    
+    .terminal-result {
+        color: #f1f1f1;
+        padding-left: 15px;
+        width: 100%;
+        margin-top: 5px;
+    }
+    
+    .terminal-cursor::after {
+        content: "▋";
+        animation: blink 1s step-start infinite;
+    }
+    
+    .mt-3 {
+        margin-top: 15px;
+    }
+    
+    @@keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+
