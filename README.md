@@ -9,8 +9,6 @@ Bu proje, Acunmedya Akademi tarafından staj eğitimi kapsamında ödev olarak h
 
 🛢 Entity Framework (DB First) – Veritabanı odaklı modelleme
 
-🔗 ADO.NET – SQL sorguları ile veri yönetimi
-
 🗄 SQL Server – Veritabanı yönetimi
 
 🔍 LINQ – Dinamik sorgulama
@@ -45,7 +43,6 @@ Bu proje, Acunmedya Akademi tarafından staj eğitimi kapsamında ödev olarak h
 
 
 
-![8-1](https://github.com/user-attachments/assets/e560fbe8-1749-4be8-88d6-c0ed0b24c454)
 
 ![9](https://github.com/user-attachments/assets/d4d73e11-e79c-4285-9bcf-a9a368169f1e)
 
