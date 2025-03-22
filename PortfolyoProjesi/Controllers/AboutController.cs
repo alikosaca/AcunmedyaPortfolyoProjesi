@@ -24,7 +24,7 @@ namespace PortfolyoProjesi.Controllers
             values.ImageUrl = _About.ImageUrl;
             values.Title = _About.Title;
             values.Description = _About.Description;
-            values.Description1 = _About.Description1;
+            values.Description2 = _About.Description2;
             values.Age = _About.Age;
             values.Website = _About.Website;
             values.Phone = _About.Phone;

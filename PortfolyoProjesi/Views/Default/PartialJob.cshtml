@@ -8,7 +8,11 @@
             {
                 <div class="resume-item">
                     <h4>@item.Title</h4>
-                    <h5>@item.StartDate</h5>
+                    <h5>
+                        @(item.StartDate.HasValue ? string.Format("{0:MM.yyyy}", item.StartDate.Value) : "--")
+                        -
+                        @(item.EndDate.HasValue ? string.Format("{0:MM.yyyy}", item.EndDate.Value) : "Devam Ediyor")
+                    </h5>
                     <p><em>@item.CompanyName</em></p>
                     <ul>@item.Description</ul>
                 </div>

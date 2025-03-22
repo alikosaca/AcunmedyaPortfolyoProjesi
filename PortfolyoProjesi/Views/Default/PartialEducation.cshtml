@@ -7,7 +7,11 @@
         {
             <div class="resume-item">
                 <h4>@item.Section</h4>
-                <h5>@item.EndYear</h5>
+                <h5>
+                    @(item.StartYear != null ? ((DateTime)item.StartYear).ToString("MM.yyyy") : "")
+                    -
+                    @(item.EndYear != null ? ((DateTime)item.EndYear).ToString("MM.yyyy") : "Devam Ediyor")
+                </h5>
                 <p><em>@item.Name</em></p>
                 <ul>@item.Description</ul>
             </div>
