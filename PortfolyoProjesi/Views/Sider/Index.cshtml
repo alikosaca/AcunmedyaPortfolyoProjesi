@@ -12,7 +12,7 @@
     </h2>
 
     <form method="post">
-        <img src="@Model.ImageUrl" />
+        <img src="@Model.ImageUrl" style="width:200px; height:200px;" />
         <label class="text-warning">
             Resim Url
             @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
